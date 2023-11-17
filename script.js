@@ -73,14 +73,28 @@ for (let index = 0; index < usersArray.length; index++) {
 let basket = 110;
 if(basket > 100) {
   if (usersArray[usersArray.indexOf(buyer)].isAmbassador === true) {
-    console.log(("La tua spesa totale é " + parseFloat(basket*(100-discount)/100) + "€"));
+    //console.log(("La tua spesa totale é " + parseFloat(basket*(100-discount)/100) + "€"));
   } else {
-    console.log("La tua spesa totale é " + parseFloat(basket) + "€");
+    //console.log("La tua spesa totale é " + parseFloat(basket) + "€");
   }
 } else {
   if (usersArray[usersArray.indexOf(buyer)].isAmbassador === true) {
-    console.log("La tua spesa totale é " + parseFloat(basket*(100-discount)/100 + shippingCost) + "€");
+    //console.log("La tua spesa totale é " + parseFloat(basket*(100-discount)/100 + shippingCost) + "€");
   } else {
-    console.log("La tua spesa totale é " + parseFloat(basket + shippingCost) + "€");
+    //console.log("La tua spesa totale é " + parseFloat(basket + shippingCost) + "€");
   }
 }
+
+//TODO EXTRA (Se c'è tempo...)
+//* Dato un array di numeri interi, stampare in console il doppio del valore dell'elemento (se questo ha indice pari), il triplo se questo ha indice dispari.
+// Fornite voi la vostra soluzione...
+
+/*let array = [2, 15, 45, 68, 243, 9, 4, 85, 94, 46];
+
+for (let index = 0; index < array.length; index++) {
+  if (array.indexOf(array[index]) % 2 === 0) {
+    console.log(array.indexOf(array[index]) * 2);
+  } else {
+    console.log(array.indexOf(array[index]) * 3);
+  }
+}*/
