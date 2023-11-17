@@ -48,6 +48,7 @@ const simon = {
 
 const prices = [34, 5, 2];
 const shippingCost = 50;
+const discount = 30;
 let buyer = amy; //cambia il valore qui per provare se il tuo algoritmo funziona!
 
 /*let usersArray = [marco, paul, amy, john, simon];
@@ -63,14 +64,23 @@ let ambassadorArray = [];
 for (let index = 0; index < usersArray.length; index++) {
   if (usersArray[index].isAmbassador) {
     ambassadorArray.push(usersArray[index]);
-  }
+    //console.log(usersArray[index].name + " " + usersArray[index].lastName + " é un ambassador");
+  } /*else {
+    console.log(usersArray[index].name + " " + usersArray[index].lastName + " non é un ambassador");
+  }*/
 }
 
-
-
-// definire var carrello
-// checkare ifAmbassador
-// se si applicare sconto e poi checkare tot carrello per spedizione
-// stampare totale carrelo
-// se no checkare totale per spedizione
-// stampare carrello
+let basket = 110;
+if(basket > 100) {
+  if (usersArray[usersArray.indexOf(buyer)].isAmbassador === true) {
+    console.log(("La tua spesa totale é " + parseFloat(basket*(100-discount)/100) + "€"));
+  } else {
+    console.log("La tua spesa totale é " + parseFloat(basket) + "€");
+  }
+} else {
+  if (usersArray[usersArray.indexOf(buyer)].isAmbassador === true) {
+    console.log("La tua spesa totale é " + parseFloat(basket*(100-discount)/100 + shippingCost) + "€");
+  } else {
+    console.log("La tua spesa totale é " + parseFloat(basket + shippingCost) + "€");
+  }
+}
